@@ -1,0 +1,163 @@
+int s1=0,s2=0,s3=0,s4=0,s5=0,s6=0,s7=0,s8=0;
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//1 black surface
+//0 white surface 
+s1=analogRead(A0);
+s2=analogRead(A1);
+s3=analogRead(A2);
+s4=analogRead(A3);
+s5=analogRead(A4);
+s6=analogRead(A5);
+s7=analogRead(A6);
+s8=analogRead(A7);
+
+if(s1>=660)
+{
+  s1=1;
+}
+else s1=0;
+if(s2>=660)
+{
+  s2=1;
+}
+else s2=0;
+if(s3>=660)
+{
+  s3=1;
+}
+else s3=0;
+if(s4>=660)
+{
+  s4=1;
+}
+else s4=0;
+if(s5>=660)
+{
+  s5=1;
+}
+else s5=0;
+if(s6>=660)
+{
+  s6=1;
+}
+else s6=0;
+if(s7>=660)
+{
+  s7=1;
+}
+else s7=0;
+if(s8>=660)
+{
+  s8=1;
+}
+else s8=0;
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,255);
+  analogWrite(4,255);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=1 && s5>=1 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,140);
+  analogWrite(4,140);
+}
+if(s1>=0 && s2>=0 && s3>=1 && s4>=0 && s5>=0 && s6>=1 && s7>=0 && s8>=0)
+{
+  analogWrite(13,140);
+  analogWrite(4,140);
+}
+if(s1>=1 && s2>=0 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,150);
+  analogWrite(4,90);
+}
+if(s1>=0 && s2>=1 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,140);
+  analogWrite(4,100);
+}
+if(s1>=0 && s2>=0 && s3>=1 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,140);
+  analogWrite(4,110);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=1 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,135);
+  analogWrite(4,255);
+}
+if(s1>=1 && s2>=1 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,145);
+  analogWrite(4,112);
+}
+if(s1>=0 && s2>=1 && s3>=1 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,140);
+  analogWrite(4,112);
+}
+if(s1>=0 && s2>=0 && s3>=1 && s4>=1 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,135);
+  analogWrite(4,135);
+}
+//if(s1>=0 && s2>=0 && s3>=0 && s4>=1 && s5>=0 && s6>=0 && s7>=0 && s8>=0)
+//{
+//  analogWrite(13,180);
+//  analogWrite(4,180);
+//}
+//if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=1 && s6>=0 && s7>=0 && s8>=0)
+//{
+//  analogWrite(13,180);
+//  analogWrite(4,180);
+//}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=0 && s8>=1)
+{
+  analogWrite(13,90);
+  analogWrite(4,150);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=1 && s8>=0)
+{
+  analogWrite(13,100);
+  analogWrite(4,140);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=0 && s6>=1 && s7>=0 && s8>=0)
+{
+  analogWrite(13,110);
+  analogWrite(4,140);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=1 && s6>=0 && s7>=0 && s8>=0)
+{
+  analogWrite(13,255);
+  analogWrite(4,135);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=0 && s6>=0 && s7>=1 && s8>=1)
+{
+  analogWrite(13,112);
+  analogWrite(4,140);
+}
+if(s1>=0 && s2>=0 && s3>=0 && s4>=0 && s5>=1 && s6>=1 && s7>=0 && s8>=0)
+{
+  analogWrite(13,135);
+  analogWrite(4,135);
+}
+  Serial.println("************************************");
+  Serial.println(s1);
+  Serial.println(s2);
+  Serial.println(s3);
+  Serial.println(s4);
+  Serial.println(s5);
+  Serial.println(s6);
+  Serial.println(s7);
+  Serial.println(s8);
+  Serial.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+  delay(1000);
+}
+
+
